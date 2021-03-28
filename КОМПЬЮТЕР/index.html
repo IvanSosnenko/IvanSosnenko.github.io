@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <title>ПК</title>
+</head>
+
+<body>
+    
+
+    <div class="text">
+        <img src="img/compukter.png" alt="" class="logo">
+        <h3>Этот сайт сайт сделан чтобы клиент выбрал на чем ему хотелось бы сделать компьютер из двух процессоров
+            intel или ryzen</h3>
+    </div>
+    <div class="choice">
+    </div>
+    <div class="select">
+        <select id="proc" class="string" onChange="intel_ryzen()">
+            <option value="" selected style="color:grey">Выберите процессор...</option>
+            <option value="intel">intel</option>
+            <option value="ryzen">ryzen</option>
+        </select>
+    </div>
+    <div class="wrapper-ryzen" id="wrapper-ryzen">
+        <div class="ryzen">
+            <h1>Ryzen :</h1>
+        </div>
+        <div class="main">
+            <li>Процессор AMD Ryzen 5 2600, OEM</li>
+
+            <li>Материнская плата GIGABYTE B450M S2H</li>
+
+            <li>Устройство охлаждения(кулер) DEEPCOOL GAMMAXX 300 FURY</li>
+
+            <li>Видеокарта SAPPHIRE AMD Radeon RX 5500XT , 11295-05-20G NITRO+ RX 5500XT 8G SE</li>
+
+            <li>Модуль памяти CORSAIR Vengeance LPX CMK16GX4M2A2666C16 DDR4 — 2x 8ГБ</li>
+
+            <li>Жесткий диск SEAGATE Barracuda ST2000DM008</li>
+
+            <li>SSD накопитель WD Green WDS240G2G0B 240ГБ</li>
+
+            <li>Корпус ATX AEROCOOL Aero One Frost-G-WT-v1, белый</li>
+
+            <li>Блок питания AEROCOOL KCAS PLUS 700, 700Вт, черный</li>
+        </div>
+        <img src="img/proc.jpg" alt="">
+        <img src="img/mather.jpg" alt="">
+        <img src="img/kold.jpg" alt="">
+        <img src="img/videocard.jpg" alt="">
+        <img src="img/memory.jpg" alt="">
+        <img src="img/ssd.jpg" alt="">
+        <img src="img/korpus.jpg" alt="">
+        <img src="img/block.jpg" alt="">
+        <h1>ИТОГО : 61780 РУБ.</h1>
+    </div>
+    <div class="wrapper-intel" id="wrapper-intel">
+        <div class="intel">
+            <hr>
+            <h1>Intel :</h1>
+        </div>
+        <div class="main2">
+
+            <li> Процессор INTEL Core i9 10900X, OEM </li>
+
+            <li> Материнская плата ASUS PRIME X299-A II </li>
+
+            <li> Модуль памяти KINGSTON HyperX FURY Black HX437C19FB3K2/32 DDR4 — 2x 16ГБ</li>
+
+            <li>Блок питания GIGABYTE AORUS GP-AP850GM, 850Вт, черный</li>
+
+            <li> Видеокарта GIGABYTE NVIDIA GeForce RTX 3080 , GV-N3080EAGLE-10GD</li>
+
+            <li> SSD накопитель SAMSUNG 970 EVO Plus MZ-V7S1T0BW 1ТБ</li>
+
+            <li> Корпус E-ATX NZXT H710i CA-H710i-BR, черный и красный</li>
+
+            <li>Жесткий диск WD Blue WD30EZRZ</li>
+
+            <li>Звуковая карта PCI-E CREATIVE BlasterX AE-5 Plus</li>
+        </div>
+        <img src="img2/proc.jpg" alt="">
+        <img src="img2/mather.jpg" alt="">
+        <img src="img2/memory.jpg" alt="">
+        <img src="img2/block.jpg" alt="">
+        <img src="img2/videocrd.jpg" alt="">
+        <img src="img2/ssd.jpg" alt="">
+        <img src="img2/korpus.jpg" alt="">
+        <img src="img2/disk.jpg" alt="">
+        <img src="img2/sound.jpg" alt="">
+
+        <h1>ИТОГО:
+            247 490 ₽</h1>
+    </div>
+    <script>
+        function intel_ryzen() {
+            let sel = document.getElementById("proc");
+            var intel = document.getElementById("wrapper-intel");
+            var ryzen = document.getElementById("wrapper-ryzen");
+            if (sel.value == "intel") {
+                ryzen.style.display = "none";
+                intel.style.display = "block";
+            }
+            else if (sel.value == "ryzen") {
+                ryzen.style.display = "block";
+                intel.style.display = "none";
+            }
+            else if (sel.value == "") {
+                ryzen.style.display = "block";
+                intel.style.display = "block";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
